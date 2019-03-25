@@ -1,4 +1,6 @@
 package ru.avalon.java.dev.j10.labs.models;
+import java.time.LocalDate;
+
 
 /**
  * Представление о паспортных данных человека.
@@ -15,7 +17,43 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport {
+    
+    private String serial;                      //Серия номер паспорта
+    private String name;                        //Имя
+    private String surname;                     //Фамилия
+    private String fatherName;                  //Отчество
+    private String secondName;                  //Второе имя
+    private LocalDate birthDate;                //Дата рождения
+    private LocalDate passportDate;             //Дата выдачи
+    private String department;                  //Место выдачи
+    
+    public String getSerial(){
+        return serial;
+    }
+    public String getName(){
+        return name;
+    }   
+    public String getSurname(){
+        return surname;
+    }   
+    public String getFatherName(){
+        return fatherName;
+    }                 
+    public String getSecondName(){
+        return secondName;
+    }                  
+    public LocalDate getBirthDate(){
+        return birthDate;
+    }       
+    public LocalDate getPassportDate(){
+        return passportDate;
+    } 
+    public String getDepartment(){
+        return department;
+    }; 
+    
+    
 
     /*
      * TODO(Студент): Закончить определение класса.
@@ -37,4 +75,20 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
-}
+
+    public Passport(String serial, String name, String surname, String fatherName, 
+            String secondName, String department) {
+        this.serial = serial;
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.secondName = secondName;
+        this.department = department;
+    }
+
+    public Passport() {
+        this("", "", "", "", "", "");
+    }
+        
+
+ }

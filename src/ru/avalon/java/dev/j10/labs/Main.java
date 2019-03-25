@@ -1,18 +1,33 @@
 package ru.avalon.java.dev.j10.labs;
+import java.time.LocalDate;     
 
+import ru.avalon.java.dev.j10.labs.models.Passport;
 import ru.avalon.java.dev.j10.labs.models.Person;
+import ru.avalon.java.dev.j10.labs.commons.Address;
 
 public class Main {
 
-    Main() {
-
+    public static void main(String[] args) {
         /*
-         * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
+         * FIXME(Студент): Измените определение етода так, чтобы он стал точкой входа в приложение.
          */
-
-        Person ivanov = null;
-        Person smith = null;
-
+//        Person ivanov = null;
+//        Person smith = null;                                                      почему не могу переопределить????
+        String ivanovName;
+        String smithName;
+        String ivanovAddress;
+        String smithAddress;
+        
+        Person ivanov = new Person(new Passport("404 404", "Иван", "Иванов", "Иванович", "", "17 о.м."),
+            new Address());
+        Person smith = new Person(new Passport("301 kk 99", "John", "Smith", "", "Edvard", "USA NPD"),
+            new Address("USA", "NY", "4th ave, 75", 141, 192168 ));
+        
+        System.out.println(ivanov.getFullName());
+        System.out.println(ivanov.getAddress());
+        System.out.println(smith.getFullName());        
+        System.out.println(smith.getAddress());
+        
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
          *
