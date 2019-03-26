@@ -18,6 +18,14 @@ public class Main {
         String ivanovAddress;
         String smithAddress;
         
+        /*  TODO (Проверка №1)
+            Ты 2 раза объявляешь переменные - Person ivanov и Person smit.
+            Объявление переменных происходит один раз, потом просто пишешь без
+            объявление класса, smit = ...  (Person перед переменной не надо ставить) 
+        
+            Убрать лишние строковые переменные
+        */
+        
         Person ivanov = new Person(new Passport("404 404", "Иван", "Иванов", "Иванович", "", "17 о.м."),
             new Address());
         Person smith = new Person(new Passport("301 kk 99", "John", "Smith", "", "Edvard", "USA NPD"),
