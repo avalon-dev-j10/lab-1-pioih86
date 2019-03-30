@@ -49,9 +49,13 @@ public class Person {
         if(pass.getFatherName()!= ""){
             fullName = pass.getName() + " " + pass.getSurname() + " " + pass.getFatherName();
         } else {
-            fullName = pass.getName() + " " + pass.getSecondName().substring(0, 1) + ". " + pass.getSurname();
+            if ( pass.getSecondName() != ""){
+                fullName = pass.getName() + " " + pass.getSecondName().substring(0, 1) + ". " + pass.getSurname();
+            } else {
+                fullName = pass.getName() + " " + pass.getSurname();
+            }
         }
-        return fullName;
+    return fullName;
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */

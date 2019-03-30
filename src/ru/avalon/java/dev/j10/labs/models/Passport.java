@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.models;
 import java.time.LocalDate;
+import java.time.Month;
 
 
 /**
@@ -94,8 +95,31 @@ public class Passport {
         - Не логичные заглушки для конструктора по-умолчанию Passport()
     */
     
+    public Passport(String serial, String name, String surname, String fatherName, 
+            String secondName, LocalDate birthDate, LocalDate passportDate, String department) {
+        this.serial = serial;
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.secondName = secondName;
+        this.birthDate = birthDate;
+        this.passportDate = passportDate;
+        this.department = department;
+    }
+
+    public Passport(String serial, String name, String surname, String fatherName, LocalDate passportDate, String department) {
+        this.serial = serial;
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.secondName = "";
+        this.passportDate = passportDate;
+        this.department = department;
+    }
+    
     public Passport() {
-        this("", "", "", "", "", "");
+        this("1111 111111", "Без имени", " Без фамилии", "Без отчества", "Без второго имени", 
+                LocalDate.of(1,1,2000), LocalDate.of(1,1,2019), "* отдел полиции" );
     }
         
 

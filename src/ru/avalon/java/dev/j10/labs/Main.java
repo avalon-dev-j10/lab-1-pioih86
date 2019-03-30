@@ -11,12 +11,8 @@ public class Main {
         /*
          * FIXME(Студент): Измените определение етода так, чтобы он стал точкой входа в приложение.
          */
-//        Person ivanov = null;
-//        Person smith = null;                                                      почему не могу переопределить????
-        String ivanovName;
-        String smithName;
-        String ivanovAddress;
-        String smithAddress;
+        Person ivanov = null;
+        Person smith = null;                                                      
         
         /*  TODO (Проверка №1)
             - Ты 2 раза объявляешь переменные - Person ivanov и Person smit.
@@ -25,9 +21,9 @@ public class Main {
             - Убрать лишние строковые переменные
         */
         
-        Person ivanov = new Person(new Passport("404 404", "Иван", "Иванов", "Иванович", "", "17 о.м."),
+        ivanov = new Person(new Passport("404 404", "Иван", "Иванов", "Иванович", "", "17 о.м."),
             new Address());
-        Person smith = new Person(new Passport("301 kk 99", "John", "Smith", "", "Edvard", "USA NPD"),
+        smith = new Person(new Passport("301 kk 99", "John", "Smith", "", "Edvard", "USA NPD"),
             new Address("USA", "NY", "4th ave, 75", 141, 192168 ));
         
         System.out.println(ivanov.getFullName());
