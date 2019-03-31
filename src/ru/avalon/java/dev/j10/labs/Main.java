@@ -21,9 +21,9 @@ public class Main {
             - Убрать лишние строковые переменные
         */
         
-        ivanov = new Person(new Passport("404 404", "Иван", "Иванов", "Иванович", "", "17 о.м."),
+        ivanov = new Person(new Passport("404 404", "Иван", "Иванов", "", "", "17 о.м."),
             new Address());
-        smith = new Person(new Passport("301 kk 99", "John", "Smith", "", "Edvard", "USA NPD"),
+        smith = new Person(new Passport("301 kk 99", "John", "Smith", "", "", "USA NPD"),
             new Address("USA", "NY", "4th ave, 75", 141, 192168 ));
         
         System.out.println(ivanov.getFullName());

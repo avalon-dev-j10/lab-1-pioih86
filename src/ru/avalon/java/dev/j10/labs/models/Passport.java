@@ -117,6 +117,10 @@ public class Passport {
         this.department = department;
     }
     
+    /*  TODO (Проверка №2)
+        - Отсутствует перезагрузка конструктора!
+    */
+    
     public Passport() {
         this("1111 111111", "Без имени", " Без фамилии", "Без отчества", "Без второго имени", 
                 LocalDate.of(1,1,2000), LocalDate.of(1,1,2019), "* отдел полиции" );
