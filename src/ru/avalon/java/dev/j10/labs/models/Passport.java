@@ -1,4 +1,7 @@
 package ru.avalon.java.dev.j10.labs.models;
+import java.time.LocalDate;
+import java.time.Month;
+
 
 /**
  * Представление о паспортных данных человека.
@@ -15,7 +18,43 @@ package ru.avalon.java.dev.j10.labs.models;
  *  <li> орган, выдавший документ.
  * </ol>
  */
-class Passport {
+public class Passport {
+    
+    private String serial;                      //Серия номер паспорта
+    private String name;                        //Имя
+    private String surname;                     //Фамилия
+    private String fatherName;                  //Отчество
+    private String secondName;                  //Второе имя
+    private LocalDate birthDate;                //Дата рождения
+    private LocalDate passportDate;             //Дата выдачи
+    private String department;                  //Место выдачи
+    
+    public String getSerial(){
+        return serial;
+    }
+    public String getName(){
+        return name;
+    }   
+    public String getSurname(){
+        return surname;
+    }   
+    public String getFatherName(){
+        return fatherName;
+    }                 
+    public String getSecondName(){
+        return secondName;
+    }                  
+    public LocalDate getBirthDate(){
+        return birthDate;
+    }       
+    public LocalDate getPassportDate(){
+        return passportDate;
+    } 
+    public String getDepartment(){
+        return department;
+    }; 
+    
+    
 
     /*
      * TODO(Студент): Закончить определение класса.
@@ -37,4 +76,55 @@ class Passport {
      * 5. Обеспечте возможность использования класса за
      *    пределами пакета.
      */
-}
+
+    public Passport(String serial, String name, String surname, String fatherName, 
+            String secondName, String department) {
+        this.serial = serial;
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.secondName = secondName;
+        this.department = department;
+    }
+
+    /*  TODO (Проверка №1)
+        - В конструкторе  не все используются поля класса, негде задать дату рождения,
+        дату выдачи
+        - Создать конструктор с полным набором полей класса и определить еще
+        несколько конструкторов с возможно отсутствующими папараметрами.
+        - Не логичные заглушки для конструктора по-умолчанию Passport()
+    */
+    
+    public Passport(String serial, String name, String surname, String fatherName, 
+            String secondName, LocalDate birthDate, LocalDate passportDate, String department) {
+        this.serial = serial;
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.secondName = secondName;
+        this.birthDate = birthDate;
+        this.passportDate = passportDate;
+        this.department = department;
+    }
+
+    public Passport(String serial, String name, String surname, String fatherName, LocalDate passportDate, String department) {
+        this.serial = serial;
+        this.name = name;
+        this.surname = surname;
+        this.fatherName = fatherName;
+        this.secondName = "";
+        this.passportDate = passportDate;
+        this.department = department;
+    }
+    
+    /*  TODO (Проверка №2)
+        - Отсутствует перезагрузка конструктора!
+    */
+    
+    public Passport() {
+        this("1111 111111", "Без имени", " Без фамилии", "Без отчества", "Без второго имени", 
+                LocalDate.of(1,1,2000), LocalDate.of(1,1,2019), "* отдел полиции" );
+    }
+        
+
+ }
